@@ -60,7 +60,8 @@ function celsiusToFahrenheit(arrayOfNumbers) {
     // Math.trunc seems to not round up the values which i think reports inaccurate results as all decimals above 5 should be rounded up
   }
   return FahrenheitTemp
-    // return arrayOfNumbers;
+  // return arrayOfNumbers;
+    
 }
 assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
