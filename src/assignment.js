@@ -34,9 +34,16 @@ assignment.sumOfNumbers = sumOfNumbers;
  * @returns number the count of even numbers
  */
 function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  let countEven = 0
+  for (i=0; i < arrayOfNumbers.length; i++){
+    if (arrayOfNumbers [i] % 2 ==0){
+      countEven +=1
+    }
+  }
+  return countEven
+    // return arrayOfNumbers.length;
 }
-// assignment.countEvenNumbers = countEvenNumbers;
+assignment.countEvenNumbers = countEvenNumbers;
 
 /**
  * Challenge - 3
@@ -55,15 +62,15 @@ function countEvenNumbers(arrayOfNumbers) {
 function celsiusToFahrenheit(arrayOfNumbers) {
   FahrenheitTemp = []
   for (const tempCelsius of arrayOfNumbers){
-    FahrenheitTemp.push(Math.round((tempCelsius * 
+    FahrenheitTemp.push(Math.trunc((tempCelsius * 
 9/5) + 32))
-    // Math.trunc seems to not round up the values which i think reports inaccurate results as all decimals above 5 should be rounded up
+    
   }
   return FahrenheitTemp
   // return arrayOfNumbers;
     
 }
-assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 
 // ========================
