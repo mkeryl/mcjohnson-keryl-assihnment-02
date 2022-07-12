@@ -14,9 +14,15 @@ const assignment = {};
  * @returns number the sum of the numbers
  */
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  let total=0;
+  for (let j in arrayOfNumbers){
+    total = total + arrayOfNumbers[j]
+  }
+  return total
+  
+    // return arrayOfNumbers.length;
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+assignment.sumOfNumbers = sumOfNumbers;
 
 /**
  * Challenge - 2
@@ -47,9 +53,16 @@ function countEvenNumbers(arrayOfNumbers) {
  * @returns Array the converted temperatures in Fahrenheit
  */
 function celsiusToFahrenheit(arrayOfNumbers) {
-    return arrayOfNumbers;
+  FahrenheitTemp = []
+  for (const tempCelsius of arrayOfNumbers){
+    FahrenheitTemp.push(Math.round((tempCelsius * 
+9/5) + 32))
+    // Math.trunc seems to not round up the values which i think reports inaccurate results as all decimals above 5 should be rounded up
+  }
+  return FahrenheitTemp
+    // return arrayOfNumbers;
 }
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 
 // ========================
